@@ -123,9 +123,9 @@ func (block *Block) writeArray(column column.Column, value Value, num, level int
 }
 
 func (block *Block) AppendRow(args []driver.Value) error {
-	if len(block.Columns) != len(args) {
-		return fmt.Errorf("block: expected %d arguments (columns: %s), got %d", len(block.Columns), strings.Join(block.ColumnNames(), ", "), len(args))
-	}
+// 	if len(block.Columns) != len(args) {
+// 		return fmt.Errorf("block: expected %d arguments (columns: %s), got %d", len(block.Columns), strings.Join(block.ColumnNames(), ", "), len(args))
+// 	}
 	block.Reserve()
 	{
 		block.NumRows++
